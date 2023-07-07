@@ -34,8 +34,8 @@
           <p>{{ item.size }}</p>
         </td>
         <td class="other-columns item-status">
-          <div>
-            <p class="">{{ item.status }}</p>
+          <div [ngClass]="{'green': item.status === 'active', 'red': item.status !== 'active'}">
+            <p>{{ item.status }}</p>
           </div>
         </td>
       </tr>
