@@ -1,0 +1,27 @@
+<div class="dropdown-menu" clickOutside (clickOutside)="clickedOutside()">
+  <button (click)="toggleDropDownMenu(item, $event)" class="item-btn">
+    Default
+  </button>
+  <span *ngIf="item.showDropdown" (click)="skipPropagation($event)">
+    <div
+      *ngFor="let dropdownItem of dropdownItems"
+      class="dropdown-item-container"
+    >
+      <div
+        (click)="chooseDropdownItem(dropdownItem, $event)"
+        class="dropdown-item"
+      >
+        <div>
+          <p>{{ dropdownItem.name }}</p>
+        </div>
+        <div>
+          <img
+            *ngIf="dropdownItem.active"
+            src="./assets/check/check.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </span>
+</div>

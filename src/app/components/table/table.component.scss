@@ -1,0 +1,145 @@
+@import "../../../utilities.scss";
+
+//.wrapper{
+// width: max(68.253vw, 100% - 1rem);
+//}
+table {
+  width: 100%;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #e2e7ee;
+  border-radius: 4px;
+  background-color: #fff;
+  border-collapse: collapse;
+}
+th {
+  font-size: toRem(10);
+  font-weight: bold;
+  letter-spacing: 0.6px;
+  color: #516173;
+  height: 30px;
+}
+
+tr:nth-child(1) {
+  td {
+    padding-top: 16px;
+  }
+}
+
+td {
+  padding-bottom: 10px;
+}
+tr:last-child {
+  td {
+    padding-bottom: 8px;
+  }
+}
+
+.item-title {
+  display: flex;
+  align-items: center;
+}
+.item-logo {
+  width: toRem(24);
+  height: toRem(24);
+  object-fit: contain;
+  margin-right: toRem(11);
+}
+
+.first-column {
+  text-align: left;
+  padding-left: toRem(20);
+  width: max(25%);
+}
+
+.second-column {
+  width: max(25%);
+}
+
+.other-columns {
+  text-align: center;
+  width: max(12.5%);
+}
+
+.item-size {
+  text-align: center;
+}
+
+.item-status {
+  text-align: center;
+  div {
+    background-color: #cffbe9;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    //padding: 2px 4px 2px 5px;
+    height: 16px;
+    width: 62px;
+    justify-content: center;
+    margin: 0 auto;
+    p {
+      color: #21985e;
+      font-size: toRem(10);
+      line-height: toRem(12);
+      letter-spacing: 1px;
+      font-weight: 500;
+    }
+  }
+}
+
+.row {
+  height: toRem(35);
+  padding: 10px 0 10px;
+  p {
+    font-size: toRem(13);
+    line-height: 35px;
+    color: #242b39;
+  }
+}
+
+thead {
+  background-color: #f1f4f8;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  border: solid 1px #e2e7ee;
+}
+
+.dropdown-button {
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 999px) {
+  .first-column {
+    padding-left: toRem(10);
+  }
+  .second-column {
+    width: max(10%);
+  }
+  .other-columns {
+    width: max(16.25%);
+  }
+}
+
+@media (max-width: 600px) {
+  .scroll-container {
+    overflow: auto;
+  }
+  table {
+    width: 600px;
+  }
+
+  .first-column {
+    padding-left: toRem(5);
+    position: sticky;
+    left: 0;
+    z-index: 5;
+    background-color: #ffffff;
+  }
+
+  .first {
+    background-color: #f1f4f8;
+  }
+  .other-columns {
+    max-width: 150px;
+  }
+}

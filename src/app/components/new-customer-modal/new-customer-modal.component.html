@@ -1,0 +1,52 @@
+<div class="modal-overlay"></div>
+
+<div class="modal">
+  <h2>New Customer</h2>
+  <p *ngIf="!validForm" class="warning">Fill in the form!!!</p>
+  <form [formGroup]="customerForm" (ngSubmit)="submit()">
+    <label>
+      Company Name:
+      <input type="text" formControlName="name" />
+    </label>
+    <!--      <label>-->
+    <!--        Company ID:-->
+    <!--        <input type="number" formControlName="com_id" min="0" >-->
+    <!--      </label>-->
+    <label>
+      Size:
+      <input type="text" formControlName="size" />
+    </label>
+    <label>
+      Enabled:
+      <select formControlName="enabled">
+        <option>True</option>
+        <option>False</option>
+      </select>
+    </label>
+    <!--      <label>-->
+    <!--        ID:-->
+    <!--        <input type="number" formControlName="id" min="0"  >-->
+    <!--      </label>-->
+    <!--      <label>-->
+    <!--        Leg ID:-->
+    <!--        <input type="number" formControlName="leg_id" min="0" >-->
+    <!--      </label>-->
+    <!--      <label>-->
+    <!--        Logo:-->
+    <!--        <input type="text" formControlName="logo" >-->
+    <!--      </label>-->
+    <label>
+      Status:
+      <select formControlName="status">
+        <option>Active</option>
+        <option>Disabled</option>
+      </select>
+    </label>
+    <div class="flexbox">
+      <button class="cancel-button" type="button" (click)="close()">
+        Cancel
+      </button>
+      <button class="submit-button" type="submit">Create</button>
+    </div>
+  </form>
+</div>

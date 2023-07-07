@@ -1,0 +1,23 @@
+@import "../../../utilities.scss";
+
+.navbar {
+  width: 100%;
+  height: toRem(44);
+  background-color: #fff;
+  display: flex;
+}
+
+.side-bar-toggle {
+  padding: toRem(15) 0 toRem(10) toRem(12);
+}
+
+.navbar-title {
+  background-color: #ffffff;
+  padding: toRem(13) 0 toRem(10) toRem(18);
+  h3 {
+    font-size: toRem(13);
+    line-height: toRem(21);
+    font-weight: 500;
+    color: #242b39;
+  }
+}

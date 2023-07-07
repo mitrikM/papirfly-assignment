@@ -1,0 +1,44 @@
+<div class="scroll-container">
+  <table>
+    <thead>
+      <tr class="">
+        <th class="first-column first">Customer</th>
+        <th class="second-column"></th>
+        <th class="other-columns">COM ID</th>
+        <th class="other-columns">LEG ID</th>
+        <th class="other-columns item-size">Size</th>
+        <th class="last-column item-status">Status</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of items$ | async" class="row">
+        <td class="first-column">
+          <div class="item-title">
+            <img src="{{ item.logo }}" alt="logo" class="item-logo" />
+            <p>{{ item.name }}</p>
+          </div>
+        </td>
+        <td class="second-column">
+          <div class="dropdown-button">
+            <app-dropdown-menu [item]="item" />
+          </div>
+        </td>
+        <td class="other-columns">
+          <p>{{ item.com_id }}</p>
+        </td>
+        <td class="other-columns">
+          <p>{{ item.leg_id }}</p>
+        </td>
+        <td class="other-columns item-size">
+          <p>{{ item.size }}</p>
+        </td>
+        <td class="other-columns item-status">
+          <div>
+            <p class="">{{ item.status }}</p>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

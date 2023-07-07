@@ -1,0 +1,25 @@
+<div class="big-container">
+  <app-navbar/>
+  <div *ngIf="isModalOpened$ | async">
+    <app-new-customer-modal/>
+  </div>
+  <div class="layout">
+    <app-sidebar/>
+    <div class="container">
+      <h1>Customer Overview</h1>
+      <div class="header">
+        <div class="search-bar">
+          <img class="search-bar-icon" src="./assets/search/search.png" alt="">
+          <input #searchString class="search-bar-input" type="text"  placeholder="Customer or ID"  (input)="onSearchUpdate(searchString.value)">
+        </div>
+        <div class="circle" (click)="openModal()">
+          <img src="./assets/plus/plus.png" alt="">
+        </div>
+      </div>
+      <app-table [items$]="items$"/>
+    </div>
+  </div>
+</div>
+
+
+
