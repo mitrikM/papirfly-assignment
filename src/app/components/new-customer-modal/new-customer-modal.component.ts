@@ -24,6 +24,7 @@ export class NewCustomerModalComponent {
       logo: [''],
       name: ['', Validators.required],
       size: ['', Validators.min(1)],
+      sizeValue: ['', Validators.required],
       status: ['', Validators.required],
     });
   }
@@ -42,6 +43,7 @@ export class NewCustomerModalComponent {
       this.validForm = true;
       this.customerForm.setValue({
         ...this.customerForm.value,
+        size: this.customerForm.value.size +' '+this.customerForm.value.sizeValue,
         com_id: this.generateRandomId(),
         id: this.generateRandomId(),
         leg_id: this.generateRandomId(),
@@ -64,6 +66,7 @@ export class NewCustomerModalComponent {
       name: '',
       size: '',
       status: '',
+      sizeValue: ''
     });
 
     this.modalService.closeModal();

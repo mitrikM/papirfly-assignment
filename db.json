@@ -69,6 +69,17 @@
       "size": "26 GB",
       "enabled": false,
       "leg_id": 3648
+    },
+    {
+      "com_id": "72204",
+      "enabled": "True",
+      "id": "73676",
+      "leg_id": "94669",
+      "logo": "./assets/notification/notification.png",
+      "name": "Aston Martin",
+      "size": "55 TB",
+      "sizeValue": "TB",
+      "status": "Active"
     }
   ]
 }

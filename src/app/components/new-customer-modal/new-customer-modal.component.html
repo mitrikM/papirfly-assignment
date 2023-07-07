@@ -6,7 +6,7 @@
   <form [formGroup]="customerForm" (ngSubmit)="submit()">
     <label>
       Company Name:
-      <input type="text" formControlName="name" />
+      <input type="text" formControlName="name" placeholder="Papirfly"/>
     </label>
     <!--      <label>-->
     <!--        Company ID:-->
@@ -14,11 +14,18 @@
     <!--      </label>-->
     <label>
       Size:
-      <input type="text" formControlName="size" />
+      <div class="size">
+          <input type="text" formControlName="size"/>
+          <select formControlName="sizeValue"  >
+            <option>MB</option>
+            <option>GB</option>
+            <option>TB</option>
+          </select>
+      </div>
     </label>
     <label>
       Enabled:
-      <select formControlName="enabled">
+      <select formControlName="enabled" class="select">
         <option>True</option>
         <option>False</option>
       </select>
@@ -35,9 +42,9 @@
     <!--        Logo:-->
     <!--        <input type="text" formControlName="logo" >-->
     <!--      </label>-->
-    <label>
+    <label >
       Status:
-      <select formControlName="status">
+      <select formControlName="status" class="select">
         <option>Active</option>
         <option>Disabled</option>
       </select>

@@ -12,6 +12,9 @@
   z-index: 9999;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+h2{
+  margin-bottom: 40px;
+}
 
 .modal-overlay {
   position: fixed;
@@ -32,7 +35,7 @@ form {
 }
 
 label {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 input[type="text"],
@@ -40,6 +43,7 @@ input[type="number"] {
   width: 100%;
   padding: 5px;
   margin-top: 5px;
+  height: 30px;
 }
 
 button {
@@ -64,7 +68,31 @@ button {
   display: flex;
   justify-content: flex-end;
 }
+.size{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  margin: auto 0;
+  input{
+    width: 60%;
+    margin: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-width: 0.8px;
+  }
+  select{
+    height: 30px;
+    width: 40%;
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
 
+.select{
+  height: 30px;
+  width: 100%;
+}
 @media (max-width: 425px) {
   .modal {
     width: 90%;
